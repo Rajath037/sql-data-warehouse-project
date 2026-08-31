@@ -35,4 +35,4 @@ This project is licensed under the MIT License (LICENSE).
 
 ### 🌟 About
 
-Hi there! I'm Rajath Rao Savekar S, also known as Data With Rajath. I'm an IT professional working on data projects.
+Hi there! I'm Rajath Rao Savekar S, and I'm an IT professional working as a application support engineer.
