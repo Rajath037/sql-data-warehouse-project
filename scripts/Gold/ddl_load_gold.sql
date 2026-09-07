@@ -13,7 +13,12 @@ Usage:
     - These views can be queried directly for analytics and reporting.
 ===============================================================================
 */
-
+--------------------------------------------
+-- Create Dimension : gold.dim_customer
+--------------------------------------------
+IF OBJECT_ID('gold.dim_customer', 'V') IS NOT NULL
+	DROP VIEW gold.dim_customer;
+GO
 CREATE OR ALTER VIEW gold.dim_customer 
 AS 
 SELECT 
@@ -45,7 +50,12 @@ LEFT JOIN silver.erp_loc_a101 la
 ON ci.cst_key = la.cid;
 
 GO
-
+--------------------------------------------
+-- Create Dimension products: gold.dim_products
+--------------------------------------------
+IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
+	DROP VIEW gold.dim_products;
+GO
 CREATE OR ALTER VIEW gold.dim_products 
 AS
 SELECT
@@ -65,7 +75,12 @@ LEFT JOIN silver.erp_px_cat_g1v2 pc
 ON pn.cat_id= pc.id;
 
 GO
-
+--------------------------------------------
+-- Create facts sales: gold.facts_sales
+--------------------------------------------
+IF OBJECT_ID('gold.facts_sales', 'V') IS NOT NULL
+	DROP VIEW gold.facts_sales;
+GO
 CREATE OR ALTER VIEW gold.facts_sales
 AS
 SELECT 
